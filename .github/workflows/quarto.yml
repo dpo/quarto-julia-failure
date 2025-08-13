@@ -27,11 +27,13 @@ jobs:
           version: "1"
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: quarto --version
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
         with:
-          to: html
+          to: pdf
           path: report.qmd
