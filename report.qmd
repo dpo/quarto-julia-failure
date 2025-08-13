@@ -1,0 +1,14 @@
+---
+title: Test
+engine: julia
+---
+
+```{julia}
+using Pkg
+Pkg.activate("testenv")
+Pkg.add("Images")
+Pkg.add("ToeplitzMatrices")
+using LinearAlgebra
+using Images, ToeplitzMatrices
+```
+
