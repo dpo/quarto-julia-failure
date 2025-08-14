@@ -6,9 +6,16 @@ engine: julia
 ```{julia}
 using Pkg
 Pkg.activate("testenv")
-Pkg.add("Images")
-Pkg.add("ToeplitzMatrices")
-using LinearAlgebra
-using Images, ToeplitzMatrices
+# Pkg.add("Images")
+# Pkg.add("ToeplitzMatrices")
+Pkg.add("PlotlyLight")
+Pkg.add("PlotlyKaleido")
+
+using PlotlyLight
+using PlotlyKaleido
+# using LinearAlgebra
+# using Images, ToeplitzMatrices
+
+PlotlyKaleido.start()
 ```
 
